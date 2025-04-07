@@ -13,7 +13,105 @@ header {
     grid-column: 2;
     grid-row: 1;
 
-    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 25px;
+    background-color: #fff;
+}
+
+.search {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon {
+    grid-column: 1;
+}
+
+input {
+    background-color: gainsboro;
+    /* width: 75% */
+    grid-column: 2;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+
+}
+
+.user {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.greet {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.greet img {
+    height: 50px;
+    width: 50px;
+}
+
+.content-options {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.content-options ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.content-options li {
+    margin-top: 16px;
+    padding: 10px 5px;
+    background-color: #C44900;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .sidebar {
@@ -25,18 +123,8 @@ header {
     gap: 10px;
     padding: 25px;
 
-    background-color: lightblue;
-}
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    background-color: #432534;
+    color: #fff;
 }
 
 .title {
@@ -55,5 +143,5 @@ a {
     grid-column: 2;
     grid-row: 2;
 
-    background-color: lightgreen;
+    background-color: #EFD6AC;
 }
