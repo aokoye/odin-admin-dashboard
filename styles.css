@@ -5,7 +5,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: .75fr 4fr;
     grid-template-rows: .75fr 4fr;
 }
 
@@ -37,10 +37,10 @@ header {
 
 input {
     background-color: gainsboro;
-    /* width: 75% */
+    width: 85%;
     grid-column: 2;
     height: 25px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: none;
 
 }
@@ -55,6 +55,11 @@ input {
 
     justify-content: center;
     align-items: center;
+}
+
+.search, 
+.user {
+    margin-top: -45px;
 }
 
 img {
@@ -96,8 +101,8 @@ img {
 
 .content-options li {
     margin-top: 16px;
-    padding: 10px 5px;
-    background-color: #C44900;
+    padding: 5px 2px;
+    background-color: #679436;
     color: #fff;
     border-radius: 10px;
     text-align: center;
@@ -114,16 +119,17 @@ a {
     color: inherit;
 }
 
+
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
 
     display: grid;
-    grid-template-rows: 50px .25fr .25fr;
+    grid-template-rows: 50px .5fr 2.25fr;
     gap: 10px;
     padding: 25px;
 
-    background-color: #432534;
+    background-color: #05668D;
     color: #fff;
 }
 
@@ -143,5 +149,110 @@ a {
     grid-column: 2;
     grid-row: 2;
 
-    background-color: #EFD6AC;
+    background-color: #EBF2FA;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main {
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 35px 1fr;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+
+.your-recipes {
+    grid-row: 1;
+}
+
+.your-recipes,
+.side h3 {
+    align-self: end;
+    margin-bottom: 5px;
+}
+
+.user-recipe {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px; 
+}
+
+.recipe {
+    padding: 30px;
+    border-radius: 5px;
+    border-left: 8px solid #A5BE00;
+}
+
+.recipe h3 {
+    margin-bottom: 20px;
+}
+
+.actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.side {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 35px 1fr 35px .5fr;
+    margin: 0 20px 20px 0;
+    
+}
+
+.ann {
+    grid-row: 1;
+}
+
+.announcements {
+    grid-row: 2;
+    margin-bottom: 10px;
+}
+
+.announcement {
+    border-top: 1px solid gainsboro;
+    padding: 10px 0;
+}
+
+.announcement:first-of-type {
+    border-top: none;
+    padding: 0 0 10px 0;
+}
+
+.announcement:last-of-type {
+    padding: 10px 0 0 0;
+}
+
+.trend {
+    grid-row: 3;
+}
+
+.trending {
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trend-recipe {
+    display: flex;
+    gap: 15px;
+}
+
+.announcements,
+.trending {
+    padding: 20px;
+}
+
+
+
+.trending,
+.recipe, 
+.announcements {
+    background-color: #fff;
 }
