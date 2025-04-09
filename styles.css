@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +9,8 @@
     display: grid;
     grid-template-columns: .75fr 4fr;
     grid-template-rows: .75fr 4fr;
+
+    font-family: "Figtree", sans-serif;
 }
 
 header {
@@ -36,7 +40,7 @@ header {
 }
 
 input {
-    background-color: gainsboro;
+    background-color: #dbe2e5;
     width: 85%;
     grid-column: 2;
     height: 25px;
@@ -51,7 +55,7 @@ input {
     justify-content: stretch;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 100px 40px 100px;
 
     justify-content: center;
     align-items: center;
@@ -66,6 +70,25 @@ img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+.profile-picture {
+    margin-right: 10px;
+}
+
+.profile-picture, .username {
+    align-self: center;
+    justify-self: center;
+    margin-left: -15px;
+}
+
+.greeting h2 {
+    font-size: 1.75em;
+}
+
+.greeting p,
+.username {
+    font-weight: 550;
 }
 
 .greet {
@@ -83,7 +106,11 @@ img {
 .greet img {
     height: 50px;
     width: 50px;
+    align-self: center;
+    justify-self: center;
 }
+
+
 
 .content-options {
     grid-column: 2;
@@ -92,20 +119,24 @@ img {
 
 .content-options ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(3, 85px);
 
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 .content-options li {
     margin-top: 16px;
-    padding: 5px 2px;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 15px;
     background-color: #679436;
     color: #fff;
+    font-size: 18px;
     border-radius: 10px;
-    text-align: center;
+    align-self: center;
+    justify-self: center;
 }
 
 ul, li {
@@ -129,7 +160,7 @@ a {
     gap: 10px;
     padding: 25px;
 
-    background-color: #05668D;
+    background-color: #1990c0;
     color: #fff;
 }
 
@@ -139,10 +170,26 @@ a {
 
 .pages {
     grid-row: 2;
+    padding-bottom: 10px;
 }
 
 .admin {
     grid-row: 3;
+}
+
+.pages,
+.admin {
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.pages li,
+.admin li {
+    margin-bottom: 10px;
+}
+
+.side-icon {
+    margin-right: 10px;
 }
 
 .main-content {
@@ -150,6 +197,7 @@ a {
     grid-row: 2;
 
     background-color: #EBF2FA;
+    padding-top: 15px;
 
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -171,7 +219,7 @@ a {
 .your-recipes,
 .side h3 {
     align-self: end;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .user-recipe {
@@ -190,6 +238,7 @@ a {
 
 .recipe h3 {
     margin-bottom: 20px;
+    color: #427AA1;
 }
 
 .actions {
@@ -200,7 +249,8 @@ a {
 .side {
     grid-column: 2;
     display: grid;
-    grid-template-rows: 35px 1fr 35px .5fr;
+    /* grid-template-rows: 35px 1fr 35px .5fr; */
+    grid-template-rows: auto;
     margin: 0 20px 20px 0;
     
 }
@@ -211,7 +261,7 @@ a {
 
 .announcements {
     grid-row: 2;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .announcement {
@@ -228,6 +278,10 @@ a {
     padding: 10px 0 0 0;
 }
 
+.announcement h4 {
+    margin-bottom: 4px;
+}
+
 .trend {
     grid-row: 3;
 }
@@ -242,11 +296,13 @@ a {
 .trend-recipe {
     display: flex;
     gap: 15px;
+    margin-left: 15px;
 }
 
 .announcements,
 .trending {
-    padding: 20px;
+    padding: 25px 20px 20px 20px;
+    border-radius: 5px;
 }
 
 
